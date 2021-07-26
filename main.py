@@ -2,6 +2,7 @@ from cpf_chars import Cpf
 from cpf_cnpj import Documento
 from datas import DateBR
 from telefone import TelefoneBr
+from cep import BuscaEndereco
 
 
 # ===== Validando CPF com caracteres "-" e "." =====
@@ -54,3 +55,10 @@ registro = DateBR()
 print(registro) # OUT → 21/07/2021 17:15
 print(registro.weekday_registration()) # OUT → quarta-feira
 print(registro.month_registration()) # OUT → julho
+
+
+# =====  CEP  =====
+
+cep = 12850970 # Gerador CEP site 4devs.com.br
+obj = BuscaEndereco(cep)
+print(obj) # OUT →  CEP: 12850-970 CIDADE: Bananal UF: SP
